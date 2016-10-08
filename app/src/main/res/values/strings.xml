@@ -2,4 +2,8 @@
     <string name="app_name">TrafficMyanmar</string>
     <string name="action_settings">Settings</string>
     <string name="title_activity_traffic_violation">TrafficViolationActivity</string>
+    <string name="title_activity_submit">Thank You</string>
+    <string name="title_submit">Your Submission have been sent successfully.</string>
+    <string name="get_points">You have 3 points</string>
+    <!--<string name="title_submit">What is design?</string>-->
 </resources>

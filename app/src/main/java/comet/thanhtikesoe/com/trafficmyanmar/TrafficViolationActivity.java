@@ -1,5 +1,6 @@
 package comet.thanhtikesoe.com.trafficmyanmar;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -10,6 +11,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -21,6 +23,9 @@ import java.util.Locale;
 
 public class TrafficViolationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
+    public final static String EXTRA_MESSAGE = "THANKS FOR SUBMISSION";
+    private Button btn_submit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,8 +35,22 @@ public class TrafficViolationActivity extends AppCompatActivity implements Adapt
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Traffic Violation");
+
+        btn_submit = (Button) findViewById(R.id.submit_button);
+        btn_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(TrafficViolationActivity.this, SubmissionActivity.class);
+                startActivity(intent);
+                finish();
+            }
+        });
+
         spinnerSetup();
     }
+
+
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

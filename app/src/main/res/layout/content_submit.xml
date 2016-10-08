@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/content_traffic_violation"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="comet.thanhtikesoe.com.trafficmyanmar.SubmissionActivity"
+    tools:showIn="@layout/activity_submission">
+
+
+    <!--<ImageView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--app:srcCompat="@drawable/submit"-->
+        <!--android:layout_marginTop="48dp"-->
+        <!--android:background="@color/appBackground"-->
+        <!--android:id="@+id/imageView"-->
+        <!--android:layout_alignParentTop="true"-->
+        <!--android:layout_centerHorizontal="true" />-->
+
+    <com.cuboid.cuboidcirclebutton.CuboidButton
+        android:id="@+id/submit_icon"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="40dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        app:cub_border_color="@color/colorPrimaryDark"
+        app:cub_border_radius="2dp"
+        app:cub_color="@color/colorPrimary"
+        app:cub_hover_color="@color/colorAccent"
+        app:cub_icon="@drawable/submit"
+        app:cub_riple_effect="true"/>
+
+    <View
+        android:id="@+id/text"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/submit_icon"/>
+
+    <!--<com.hanks.htextview.HTextView-->
+        <!--android:id="@+id/htext"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="100dp"-->
+        <!--android:background="#000"-->
+        <!--android:clickable="true"-->
+        <!--android:onClick="onClick"-->
+        <!--android:gravity="center"-->
+        <!--android:text="@string/title_submit"-->
+        <!--android:textColor="#fff"-->
+        <!--android:textSize="20sp"-->
+        <!--htext:animateType="rainbow"-->
+        <!--htext:fontAsset="fonts/Lato-Black.ttf"-->
+        <!--android:layout_below="@+id/text"-->
+        <!--android:layout_alignParentLeft="true"-->
+        <!--android:layout_alignParentStart="true"-->
+        <!--android:layout_marginTop="40dp" />-->
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/layout_textview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+    <TextView
+        android:id="@+id/htext"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/title_submit"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corner_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_margin="40dp" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="0dp"
+        android:layout_height="0dp">
+
+    </View>
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="@string/get_points"
+        android:textColor="#fff"
+        android:textSize="20sp"
+        android:background="@drawable/rounded_corner_button"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_below="@id/layout_textview"/>
+
+</RelativeLayout>
