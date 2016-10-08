@@ -8,8 +8,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
+import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -17,7 +19,7 @@ import java.util.Calendar;
 import java.util.List;
 import java.util.Locale;
 
-public class TrafficViolationActivity extends AppCompatActivity {
+public class TrafficViolationActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +30,7 @@ public class TrafficViolationActivity extends AppCompatActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Traffic Violation");
+        spinnerSetup();
     }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -51,32 +54,39 @@ public class TrafficViolationActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     Spinner spinnerDay;
-    public void spinnerSetup(View v) {
-        String compareValue = "TODAY";
-        spinnerDay = (Spinner) v.findViewById(R.id.spinner);
+    public void spinnerSetup() {
+
+        // Spinner element
+        Spinner spinner = (Spinner) findViewById(R.id.spinner);
 
         // Spinner click listener
+        spinner.setOnItemSelectedListener(this);
 
         // Spinner Drop down elements
-        List<String> categoriesTest = new ArrayList<>();
+        List<String> categories = new ArrayList<String>();
+        categories.add("Case One");
+        categories.add("Case Two");
+        categories.add("Case Three");
+        categories.add("Case Four");
 
-
-        categoriesTest.add("TODAY");
-        categoriesTest.add("TODAY");
-        categoriesTest.add("TODAY");
-        categoriesTest.add("TODAY");
         // Creating adapter for spinner
-        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categoriesTest);
+        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
 
         // Drop down layout style - list view with radio button
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
         // attaching data adapter to spinner
-        spinnerDay.setAdapter(dataAdapter);
-        if (!compareValue.equals(null)) {
-            int spinnerPosition = dataAdapter.getPosition(compareValue);
-            spinnerDay.setSelection(spinnerPosition);
+        spinner.setAdapter(dataAdapter);
+    }
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        // On selecting a spinner item
+        String item = parent.getItemAtPosition(position).toString();
 
-        }
+        // Showing selected spinner item
+        Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_LONG).show();
+    }
+    public void onNothingSelected(AdapterView<?> arg0) {
+        // TODO Auto-generated method stub
     }
 }

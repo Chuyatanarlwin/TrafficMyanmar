@@ -14,17 +14,20 @@
         android:orientation="horizontal"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
+
         <ImageButton
             android:src="@drawable/ic_action_name"
             android:layout_margin="16dp"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:background="@drawable/rounded_corner_button"
             android:layout_height="wrap_content" />
         <ImageButton
             android:src="@drawable/ic_gallery"
             android:layout_margin="16dp"
             android:layout_weight="1"
             android:layout_width="0dp"
+            android:background="@drawable/rounded_corner_button"
             android:layout_height="match_parent" />
     </LinearLayout>
 
@@ -47,7 +50,7 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content" />
         <ImageView
-            android:src="@drawable/photo_five"
+            android:src="@drawable/photo_two"
             android:layout_margin="5dp"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -62,9 +65,10 @@
         <Spinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-        </Spinner>
+            android:layout_height="match_parent"
+            android:prompt="@string/app_name"
+            android:layout_gravity="center"
+            />
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -75,6 +79,7 @@
         <Button
             android:layout_margin="10dp"
             android:text="Submit"
+            android:background="@drawable/rounded_corner_button"
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
     </LinearLayout>

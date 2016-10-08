@@ -9,7 +9,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    android:background="@drawable/app_background"
+    android:background="@color/appBackground"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="comet.thanhtikesoe.com.trafficmyanmar.MainActivity"
     tools:showIn="@layout/activity_main">
@@ -42,7 +42,7 @@
             android:layout_width="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextColor"
             android:text="Traffic Police Station"
             android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -69,7 +69,7 @@
             android:layout_below="@+id/icon_two"
             android:layout_width="100dp"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextColor"
             android:text="Traffic Violation"
             android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -95,7 +95,7 @@
             android:layout_below="@+id/icon_three"
             android:layout_width="100dp"
             android:gravity="center"
-            android:textColor="@color/colorPrimaryDark"
+            android:textColor="@color/colorTextColor"
             android:text="Traffic News And Info"
             android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -129,7 +129,7 @@
                 android:layout_width="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorTextColor"
                 android:text="Check Violation"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -155,7 +155,7 @@
                 android:layout_below="@+id/icon_five"
                 android:layout_width="100dp"
                 android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorTextColor"
                 android:text="Fine Payment"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
@@ -181,7 +181,7 @@
                 android:layout_below="@+id/icon_six"
                 android:layout_width="100dp"
                 android:gravity="center"
-                android:textColor="@color/colorPrimaryDark"
+                android:textColor="@color/colorTextColor"
                 android:text="FAQ"
                 android:layout_height="wrap_content" />
         </RelativeLayout>
