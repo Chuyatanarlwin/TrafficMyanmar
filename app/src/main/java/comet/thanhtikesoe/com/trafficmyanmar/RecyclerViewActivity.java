@@ -12,13 +12,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import java.util.ArrayList;
-
 import comet.thanhtikesoe.com.trafficmyanmar.Adapter.StationAdapter;
 
-/**
- * Created by ngweyeeshoon on 10/10/16.
- */
+import static comet.thanhtikesoe.com.trafficmyanmar.PoliceStation.policeStations;
+
 
 public class RecyclerViewActivity extends AppCompatActivity{
     private RecyclerView mRecyclerView;
@@ -40,12 +37,22 @@ public class RecyclerViewActivity extends AppCompatActivity{
 
         phoneNo = (TextView) findViewById(R.id.textview_phone);
 
+        String[] PoliceStation_name = new String[policeStations.length];
+        for (int i = 0; i < PoliceStation_name.length; i++) {
+            PoliceStation_name[i] = policeStations[i].getmStationName();
+        }
+
+        String[]  PoliceStation_phone= new String[policeStations.length];
+        for (int i = 0; i < PoliceStation_phone.length; i++) {
+            PoliceStation_phone[i] = policeStations[i].getmPhoneno();
+
+        }
 
         mRecyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        mAdapter = new StationAdapter(getDataSet());
+        mAdapter = new StationAdapter(PoliceStation_name,PoliceStation_phone);
         mRecyclerView.setAdapter(mAdapter);
         RecyclerView.ItemDecoration itemDecoration =
                 new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
@@ -61,20 +68,9 @@ public class RecyclerViewActivity extends AppCompatActivity{
             @Override
             public void onItemClick(int position, View v) {
                 Log.i(LOG_TAG, " Clicked on Item " + position);
-
             }
         });
 
-    }
-
-    private ArrayList<PoliceStation> getDataSet() {
-        ArrayList results = new ArrayList<PoliceStation>();
-        for (int index = 0; index < 20; index++) {
-            PoliceStation obj = new PoliceStation("Station: " + index,
-                    "Phone: " + index);
-            results.add(index, obj);
-        }
-        return results;
     }
 
     @Override
