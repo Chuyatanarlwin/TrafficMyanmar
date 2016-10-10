@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="vertical"
+    tools:context="comet.thanhtikesoe.com.trafficmyanmar.RecyclerViewActivity">
+
+         <Button
+                android:id="@+id/call_police_station"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="4dp"
+                android:text="Call"/>
+
+            <TextView
+                android:id="@+id/textView_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/call_police_station"
+                android:textStyle="bold"
+                android:padding="4dp"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                tools:text="Station Name"/>
+
+            <TextView
+                android:id="@+id/textview_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/call_police_station"
+                android:layout_below="@id/textView_name"
+                android:padding="4dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                tools:text="Phone Number"/>
+
+</RelativeLayout>

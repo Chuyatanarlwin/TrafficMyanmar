@@ -24,6 +24,7 @@
             android:layout_width="0dp"
             android:layout_height="match_parent">
         <com.cuboid.cuboidcirclebutton.CuboidButton
+            android:onClick="onClickPoliceStation"
             android:id="@+id/icon_one"
             android:layout_width="80dp"
             android:layout_height="80dp"

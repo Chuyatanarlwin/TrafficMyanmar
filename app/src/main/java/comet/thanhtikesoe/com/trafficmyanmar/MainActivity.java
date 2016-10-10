@@ -22,6 +22,12 @@ public class MainActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Yangon Traffic Police");
     }
 
+    public void onClickPoliceStation(View view){
+        Log.d(TAG, "onClickPoliceStation");
+        Intent intent = new Intent(this, RecyclerViewActivity.class);
+        startActivity(intent);
+    }
+
     public void onClickViolation(View view){
         Log.d(TAG, "onClickViolation: ");
         Intent intent = new Intent(this, TrafficViolationActivity.class);
