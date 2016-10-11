@@ -12,7 +12,6 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import java.util.ArrayList;
-
 import comet.thanhtikesoe.com.trafficmyanmar.Model.PoliceStation;
 import comet.thanhtikesoe.com.trafficmyanmar.R;
 
@@ -74,13 +73,11 @@ public class MyRecyclerViewAdapter extends RecyclerView
                 Context c = v.getContext();
                 Intent intent= new Intent();
                 intent.setAction(Intent.ACTION_CALL);
-
-//                intent.setData(Uri.parse("tel:" + holder.phone.getText()));
-                intent.setData(Uri.parse("tel:09784037091"));
+                intent.setData(Uri.parse("tel:" + holder.phone.getText()));
+//              intent.setData(Uri.parse("tel:09773632634"));
                 c.startActivity(intent);
             }
         });
-
     }
 
     public void addItem(PoliceStation dataObj, int index) {
