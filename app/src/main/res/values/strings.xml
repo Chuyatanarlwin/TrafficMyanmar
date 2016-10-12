@@ -5,5 +5,17 @@
     <string name="title_activity_submit">Thank You</string>
     <string name="title_submit">Your Submission have been sent successfully.</string>
     <string name="get_points">You have 3 points</string>
+    <string name="welcome_text">Welcome</string>
+    <string name="hello_world">Hello World</string>
+    <string name="action_create_order">Create Order</string>
+    <string name="action_share">Share</string>
+    <string name="open_drawer">Open the Drawer</string>
+    <string name="close_drawer">Close the drawer</string>
     <!--<string name="title_submit">What is design?</string>-->
+
+    <string-array name="titles">
+        <item>Home</item>
+        <item>Rate Us</item>
+        <item>Invite Friends</item>
+    </string-array>
 </resources>

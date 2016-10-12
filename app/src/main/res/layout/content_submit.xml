@@ -9,17 +9,6 @@
     tools:context="comet.thanhtikesoe.com.trafficmyanmar.SubmissionActivity"
     tools:showIn="@layout/activity_submission">
 
-
-    <!--<ImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--app:srcCompat="@drawable/submit"-->
-        <!--android:layout_marginTop="48dp"-->
-        <!--android:background="@color/appBackground"-->
-        <!--android:id="@+id/imageView"-->
-        <!--android:layout_alignParentTop="true"-->
-        <!--android:layout_centerHorizontal="true" />-->
-
     <com.cuboid.cuboidcirclebutton.CuboidButton
         android:id="@+id/submit_icon"
         android:layout_width="100dp"

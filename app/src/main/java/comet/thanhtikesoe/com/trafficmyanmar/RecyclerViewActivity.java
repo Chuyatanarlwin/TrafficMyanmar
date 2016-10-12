@@ -39,7 +39,8 @@ public class RecyclerViewActivity extends AppCompatActivity {
         RecyclerView.ItemDecoration itemDecoration =
                 new DividerItemDecoration(this, LinearLayoutManager.VERTICAL);
         mRecyclerView.addItemDecoration(itemDecoration);
-
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+        getSupportActionBar().setTitle("Police Stations");
         // Code to Add an item with default animation
         //((MyRecyclerViewAdapter) mAdapter).addItem(obj, index);
 
