@@ -1,11 +1,14 @@
 package comet.thanhtikesoe.com.trafficmyanmar;
 
-import android.content.Intent;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -43,13 +46,24 @@ public class TrafficViolationActivity extends AppCompatActivity {
         btn_submit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(TrafficViolationActivity.this, SubmissionActivity.class);
-                startActivity(intent);
-                finish();
+                AlertDialog.Builder builder = new AlertDialog.Builder(
+                        TrafficViolationActivity.this);
+                builder.setTitle("Submission is successful...");
+                builder.setMessage("You have 3 points");
+                builder.setPositiveButton("OK",
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(DialogInterface dialog,
+                                                int which) {
+                                Toast.makeText(getApplicationContext(),"Yes is clicked",Toast.LENGTH_LONG).show();
+
+                            }
+                        });
+                builder.setCancelable(false);
+                builder.show();
             }
         });
-
         spinnerSetup();
+
     }
 
     @Override
