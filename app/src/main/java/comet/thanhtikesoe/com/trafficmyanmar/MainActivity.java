@@ -53,7 +53,6 @@ public class MainActivity extends AppCompatActivity {
         }
         FragmentTransaction ft = getFragmentManager().beginTransaction();
         ft.replace(R.id.content_frame, fragment, "visible_fragment");
-        ft.addToBackStack(null);
         ft.setTransition(FragmentTransaction.TRANSIT_FRAGMENT_FADE);
         ft.commit();
         //Set the action bar title
@@ -70,14 +69,10 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("Yangon Traffic Police");
-
         titles = getResources().getStringArray(R.array.titles);
         drawerList = (ListView)findViewById(android.R.id.list);
         drawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        //Populate the ListView
-        drawerList.setAdapter(new ArrayAdapter<String>(this,
-                android.R.layout.simple_list_item_activated_1, titles));
-        drawerList.setOnItemClickListener(new DrawerItemClickListener());
+
         //Display the correct fragment.
         if (savedInstanceState != null) {
             currentPosition = savedInstanceState.getInt("position");
@@ -85,6 +80,16 @@ public class MainActivity extends AppCompatActivity {
         } else {
             selectItem(0);
         }
+        NavigationDrawerSetup();
+    }
+
+    private void NavigationDrawerSetup() {
+
+        //Populate the ListView
+        drawerList.setAdapter(new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_activated_1, titles));
+        drawerList.setOnItemClickListener(new DrawerItemClickListener());
+
         //Create the ActionBarDrawerToggle
         drawerToggle = new ActionBarDrawerToggle(this, drawerLayout,
                 R.string.open_drawer, R.string.close_drawer) {

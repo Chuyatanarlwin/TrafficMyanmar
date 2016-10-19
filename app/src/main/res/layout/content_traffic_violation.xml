@@ -16,7 +16,9 @@
         android:layout_height="wrap_content">
 
         <ImageButton
+            android:id="@+id/capture_image"
             android:src="@drawable/ic_action_name"
+            android:onClick="CaptureImage"
             android:layout_margin="16dp"
             android:layout_weight="1"
             android:layout_width="0dp"
@@ -62,13 +64,20 @@
         android:layout_below="@+id/layout_two"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
-        <Spinner
+        <!--<Spinner-->
+            <!--android:id="@+id/spinner"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:prompt="@string/app_name"-->
+            <!--android:layout_gravity="center"-->
+            <!--/>-->
+        <com.jaredrummler.materialspinner.MaterialSpinner
             android:id="@+id/spinner"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
+            android:layout_height="wrap_content"
             android:prompt="@string/app_name"
-            android:layout_gravity="center"
-            />
+            android:layout_gravity="center"/>
+
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"

@@ -29,23 +29,6 @@
         android:layout_height="40dp"
         android:layout_below="@id/submit_icon"/>
 
-    <!--<com.hanks.htextview.HTextView-->
-        <!--android:id="@+id/htext"-->
-        <!--android:layout_width="match_parent"-->
-        <!--android:layout_height="100dp"-->
-        <!--android:background="#000"-->
-        <!--android:clickable="true"-->
-        <!--android:onClick="onClick"-->
-        <!--android:gravity="center"-->
-        <!--android:text="@string/title_submit"-->
-        <!--android:textColor="#fff"-->
-        <!--android:textSize="20sp"-->
-        <!--htext:animateType="rainbow"-->
-        <!--htext:fontAsset="fonts/Lato-Black.ttf"-->
-        <!--android:layout_below="@+id/text"-->
-        <!--android:layout_alignParentLeft="true"-->
-        <!--android:layout_alignParentStart="true"-->
-        <!--android:layout_marginTop="40dp" />-->
 
     <LinearLayout
         android:orientation="horizontal"

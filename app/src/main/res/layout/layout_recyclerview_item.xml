@@ -7,7 +7,7 @@
     android:orientation="vertical"
     tools:context="comet.thanhtikesoe.com.trafficmyanmar.RecyclerViewActivity">
 
-         <Button
+            <Button
                 android:id="@+id/call_police_station"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
