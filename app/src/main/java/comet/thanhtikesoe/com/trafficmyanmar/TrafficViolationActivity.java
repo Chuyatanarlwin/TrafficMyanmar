@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.Spinner;
@@ -17,7 +18,12 @@ import android.widget.Toast;
 
 import com.jaredrummler.materialspinner.MaterialSpinner;
 
-public class TrafficViolationActivity extends AppCompatActivity {
+import java.util.ArrayList;
+import java.util.List;
+
+import static android.R.id.text1;
+
+public class TrafficViolationActivity extends AppCompatActivity{
 
     public final static String EXTRA_MESSAGE = "THANKS FOR SUBMISSION";
     private Button btn_submit;
@@ -89,39 +95,6 @@ public class TrafficViolationActivity extends AppCompatActivity {
     }
 
     Spinner spinnerDay;
-
-//    public void spinnerSetup() {
-//
-//        MaterialSpinner spinner = (MaterialSpinner) findViewById(R.id.spinner);
-
-        // Spinner click listener
-//        spinner.setOnItemSelectedListener((MaterialSpinner.OnItemSelectedListener) this);
-
-////      Spinner Drop down elements
-//        List<String> categories = new ArrayList<String>();
-//        categories.add("Case One");
-//        categories.add("Case Two");
-//        categories.add("Case Three");
-//        categories.add("Case Four");
-//
-//
-//        // Creating adapter for spinner
-//        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,android.R.layout.simple_spinner_item,categories);
-//
-//        // Drop down layout style - list view with radio button
-//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//        // Spinner element
-//        // attaching data adapter to spinner
-//        spinner.setAdapter(dataAdapter);
-//
-//        spinner.setOnItemSelectedListener(new MaterialSpinner.OnItemSelectedListener<String>() {
-//
-//            @Override
-//            public void onItemSelected(MaterialSpinner view, int position, long id, String item) {
-//                Toast.makeText(getApplicationContext(), "Select " + item, Toast.LENGTH_SHORT).show();
-//            }
-//        });
-//    }
 
     private void spinnerSetup() {
 
