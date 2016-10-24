@@ -2,7 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="comet.thanhtikesoe.com.trafficmyanmar">
 
-    <uses-permission android:name="android.permission.CALL_PHONE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -29,7 +31,6 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="comet.thanhtikesoe.com.trafficmyanmar.MainActivity" />
         </activity>
-
         <activity
             android:name=".SubmissionActivity"
             android:label="@string/title_activity_submit"
@@ -38,10 +39,9 @@
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="comet.thanhtikesoe.com.trafficmyanmar.TrafficViolationActivity" />
-
         </activity>
-
-        <activity android:name=".RecyclerViewActivity"
+        <activity
+            android:name=".RecyclerViewActivity"
             android:label="Recyclerview"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -49,9 +49,17 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="comet.thanhtikesoe.com.trafficmyanmar.MainActivity" />
         </activity>
+        <activity android:name=".Gallery.CustomGalleryActivity">
+            <intent-filter>
+                <action android:name="cunoraz.ACTION_PICK" />
+                <action android:name="cunoraz.ACTION_MULTIPLE_PICK" />
 
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".HorizontalScrollViewActivity">
 
-
+        </activity>
     </application>
 
 </manifest>
